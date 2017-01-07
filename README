@@ -1,0 +1,43 @@
+Bucur Ionut-Cristian,323CA
+
+Pentru rezolvarea acestei teme am implementat urmatoarele clase:
+
+#CityMap
+	-aceasta clasa are rolul de a extrage din fiserul de intrare(maze.in) datele
+(matricea si implicit pozitiile characterelor) si de a le salva in memorie
+
+#Character
+	-aceasta clasa are rolul de a salva coordonatele si numele characterelor
+
+#Lee
+	-aceasta clasa dupa cum spune si numele ei,contine o implementare a 
+algoritmului Lee si are ca scop calcularea a datelor de output
+	-in aceasta clase sunt incluse 2 clase interne ajutatoare(Dot si Node ce 
+extinde aceasta clasa)
+	-in aceasta clasa copiem datele extrase de CityMap si le prelucram in 
+conditii de siguranta(fara a afecta datele din CityMap)
+	-metoda Start este privata intrucat este folosita numai de metoda publica 
+Path
+	-flowul acestei clase este urmatorul:
+		1.dintr-un obiect de tipul CityMap se copiaza datele in containere 
+		interne
+		2.in metoda Path se apeleaza metoda Start ce implementeaza algoritmul 
+		Lee si modifica matricea container incat va avea in punctul de oprire 
+		numarul de pasi efectuati pentru a ajung acolo din punctul de start
+		3.in cadrul aceleiasi metode,se apeleaze metoda getTimeToFindThePath ce 
+		calculeaza timpul de intalnire,bazat pe valoarea lungimii drumului
+		extrasa de metoda getPathLength
+		4.dupa ce am extras aceste date aplicam metoda Start inversand punctul 
+		de start cu cel de stop
+		5.suprapunem cele 2 matrici obtinute si scriem in fisierul de output
+		(maze.out) coordonatele punctelelor de intalnire reprezentate de 
+		locurile din cele 2 matrici in care se afla numarul de pasi necesari 
+		"intalnirii" in aceleasi coordonate
+		
+#Game
+	-aceasta clasa are rolul de a instantia o clasa de acelasi tip,un obiect de 
+tip CityMap si unul de tipul Lee,prin care se va apela metoda Path
+	
+
+
+

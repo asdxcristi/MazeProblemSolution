@@ -1,0 +1,11 @@
+public enum Neigh {
+	
+	DIAG_LEFT_UP, 
+	UP, 
+	DIAG_RIGHT_UP, 
+	LEFT, 
+	RIGHT, 
+	DIAG_LEFT_DOWN,
+	DOWN, 
+	DIAG_RIGHT_DOWN
+}
